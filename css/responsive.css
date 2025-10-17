@@ -44,6 +44,10 @@
     max-width: 110px;
   }
   
+  .nav-actions {
+    gap: 16px; /* Smaller gap on tablet */
+  }
+  
   /* Show desktop navigation on tablet */
   .nav-center {
     display: flex;
@@ -127,6 +131,10 @@
   .logo-image {
     height: 23px; /* Full logo size on desktop */
     max-width: 120px;
+  }
+  
+  .nav-actions {
+    gap: 24px; /* Full gap on desktop */
   }
   
   /* Show desktop navigation */
@@ -251,6 +259,11 @@
   /* Show simplified mobile layout */
   .nav-container {
     justify-content: space-between;
+  }
+  
+  .logo-image {
+    height: 20px; /* Smaller logo on mobile */
+    max-width: 100px;
   }
   
   /* Show mobile menu toggle on mobile */

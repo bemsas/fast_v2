@@ -33,47 +33,54 @@
     <header class="header" role="banner">
         <nav class="navigation" role="navigation" aria-label="Main navigation">
             <div class="nav-container">
-                <!-- Left Section: Language Selector -->
-                <div class="nav-left">
-                    <div class="language-selector">
-                        <select class="language-select" aria-label="Select language">
-                            <option value="lt">LT</option>
-                            <option value="en">EN</option>
-                            <option value="lv">LV</option>
-                            <option value="ee">EE</option>
-                        </select>
-                    </div>
+                <!-- Logo Section -->
+                <div class="nav-logo">
+                    <a href="/" class="logo-link" aria-label="Venipak - Go to homepage">
+                        <img src="https://cdn.brandfetch.io/id5H-TZ6nY/theme/light/logo.svg?c=1bxidaciroxw1hJIg61Gx" 
+                             alt="Venipak" 
+                             class="logo-image" 
+                             width="120" 
+                             height="23">
+                    </a>
                 </div>
 
-                <!-- Center Section: Main Navigation -->
+                <!-- Main Navigation -->
                 <nav class="nav-center" role="navigation" aria-label="Main navigation">
                     <ul class="nav-list" role="menubar">
                         <li class="nav-item" role="none">
-                            <a href="#kontaktai" class="nav-link" role="menuitem">Kontaktai</a>
+                            <a href="#privatieims" class="nav-link" role="menuitem">Privatieims</a>
                         </li>
-                        <li class="nav-item" role="none">
-                            <a href="#karjera" class="nav-link" role="menuitem">Karjera</a>
-                        </li>
-                        <li class="nav-item" role="none">
-                            <a href="#apie-mus" class="nav-link" role="menuitem">Apie mus</a>
-                        </li>
-                        <li class="nav-item" role="none">
-                            <a href="#tvarumas" class="nav-link" role="menuitem">Tvarumas</a>
-                        </li>
-                        <li class="nav-item" role="none">
-                            <a href="#naujienos" class="nav-link" role="menuitem">Naujienos</a>
+                        <li class="nav-item nav-item-dropdown" role="none">
+                            <a href="#verslui" class="nav-link nav-link-dropdown" role="menuitem" aria-expanded="false">
+                                Verslui
+                                <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                    <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
                         </li>
                     </ul>
                 </nav>
 
-                <!-- Right Section: Secondary Navigation -->
+                <!-- Right Section: Action Links -->
                 <div class="nav-right">
-                    <ul class="nav-secondary" role="menubar">
-                        <li class="nav-secondary-item" role="none">
-                            <a href="#verslo-klientai" class="nav-secondary-link" role="menuitem">Verslo klientų vardai</a>
+                    <ul class="nav-actions" role="menubar">
+                        <li class="nav-action-item" role="none">
+                            <a href="#pastomatai" class="nav-action-link" role="menuitem">
+                                <svg class="nav-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.2"/>
+                                    <path d="M6 7h4M6 9h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                                </svg>
+                                Paštomatai
+                            </a>
                         </li>
-                        <li class="nav-secondary-item" role="none">
-                            <a href="#registracija" class="nav-secondary-link" role="menuitem">Registracija</a>
+                        <li class="nav-action-item" role="none">
+                            <a href="#siusti-siunta" class="nav-action-link" role="menuitem">Siųsti siuntą</a>
+                        </li>
+                        <li class="nav-action-item" role="none">
+                            <a href="#sekti-siunta" class="nav-action-link" role="menuitem">Sekti siuntą</a>
+                        </li>
+                        <li class="nav-action-item" role="none">
+                            <a href="#pagalba" class="nav-action-link" role="menuitem">Pagalba</a>
                         </li>
                     </ul>
                     <button class="search-button" type="button" aria-label="Search">
@@ -100,25 +107,22 @@
             <div class="mobile-menu" id="mobile-menu" role="menu" aria-hidden="true">
                 <ul class="mobile-nav-list" role="none">
                     <li class="mobile-nav-item" role="none">
-                        <a href="#kontaktai" class="mobile-nav-link" role="menuitem" tabindex="-1">Kontaktai</a>
+                        <a href="#privatieims" class="mobile-nav-link" role="menuitem" tabindex="-1">Privatieims</a>
                     </li>
                     <li class="mobile-nav-item" role="none">
-                        <a href="#karjera" class="mobile-nav-link" role="menuitem" tabindex="-1">Karjera</a>
-                    </li>
-                    <li class="mobile-nav-item" role="none">
-                        <a href="#apie-mus" class="mobile-nav-link" role="menuitem" tabindex="-1">Apie mus</a>
-                    </li>
-                    <li class="mobile-nav-item" role="none">
-                        <a href="#tvarumas" class="mobile-nav-link" role="menuitem" tabindex="-1">Tvarumas</a>
-                    </li>
-                    <li class="mobile-nav-item" role="none">
-                        <a href="#naujienos" class="mobile-nav-link" role="menuitem" tabindex="-1">Naujienos</a>
+                        <a href="#verslui" class="mobile-nav-link" role="menuitem" tabindex="-1">Verslui</a>
                     </li>
                     <li class="mobile-nav-item mobile-nav-divider" role="none">
-                        <a href="#verslo-klientai" class="mobile-nav-link" role="menuitem" tabindex="-1">Verslo klientų vardai</a>
+                        <a href="#pastomatai" class="mobile-nav-link" role="menuitem" tabindex="-1">Paštomatai</a>
                     </li>
                     <li class="mobile-nav-item" role="none">
-                        <a href="#registracija" class="mobile-nav-link" role="menuitem" tabindex="-1">Registracija</a>
+                        <a href="#siusti-siunta" class="mobile-nav-link" role="menuitem" tabindex="-1">Siųsti siuntą</a>
+                    </li>
+                    <li class="mobile-nav-item" role="none">
+                        <a href="#sekti-siunta" class="mobile-nav-link" role="menuitem" tabindex="-1">Sekti siuntą</a>
+                    </li>
+                    <li class="mobile-nav-item" role="none">
+                        <a href="#pagalba" class="mobile-nav-link" role="menuitem" tabindex="-1">Pagalba</a>
                     </li>
                 </ul>
             </div>
