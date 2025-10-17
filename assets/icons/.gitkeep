@@ -1,0 +1,17 @@
+# Icons Directory
+
+This directory will contain all icons exported from the Figma design:
+
+- Navigation icons
+- Social media icons
+- Feature/service icons
+- UI element icons
+- Arrow and decorative icons
+
+All icons should be exported as SVG files from Figma to ensure:
+- Scalability at all screen sizes
+- Crisp rendering on high-DPI displays
+- Small file sizes
+- Easy styling with CSS
+
+Icons will be organized and named according to their usage in the design.

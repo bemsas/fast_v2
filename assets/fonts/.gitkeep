@@ -1,0 +1,20 @@
+# Fonts Directory
+
+This directory will contain all custom fonts used in the Figma design:
+
+- Primary font family files
+- Secondary font family files
+- Heading font files (if different)
+- Font weights and styles as specified in Figma
+
+Supported font formats:
+- WOFF2 (preferred for modern browsers)
+- WOFF (fallback for older browsers)
+- TTF/OTF (if needed for specific requirements)
+
+Font files should be organized by font family and include all weights and styles used in the Figma design.
+
+Font loading will be optimized with:
+- font-display: swap for better performance
+- Proper fallback font stacks
+- Preloading of critical fonts

@@ -1,0 +1,19 @@
+# Images Directory
+
+This directory will contain all images exported from the Figma design:
+
+- Hero background images
+- Section images and graphics
+- Product/service images
+- Company logos and branding assets
+- Icon images (if not using SVG)
+
+All images should be optimized for web use while maintaining the quality specified in the Figma design.
+
+Recommended formats:
+- WebP for modern browsers with JPEG/PNG fallbacks
+- SVG for logos and simple graphics
+- PNG for images requiring transparency
+- JPEG for photographs and complex images
+
+Images will be organized in subdirectories as needed based on the Figma design structure.

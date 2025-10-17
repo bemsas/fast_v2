@@ -1,0 +1,29 @@
+{
+  "name": "venipak-front-page",
+  "version": "1.0.0",
+  "description": "Venipak front page - Logistics and delivery services website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static site - no build step required'",
+    "start": "vercel dev",
+    "deploy": "vercel --prod",
+    "check": "node deploy-check.js",
+    "predeploy": "node deploy-check.js"
+  },
+  "keywords": [
+    "venipak",
+    "logistics",
+    "delivery",
+    "front-page",
+    "static-site"
+  ],
+  "author": "Venipak",
+  "license": "MIT",
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

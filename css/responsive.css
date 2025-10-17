@@ -1,0 +1,343 @@
+/* ===================================
+   VENIPAK FRONT PAGE - RESPONSIVE STYLES
+   ===================================
+   
+   This file contains responsive design styles
+   All breakpoints and responsive behavior will match exact Figma specifications
+*/
+
+/* ===================================
+   RESPONSIVE BREAKPOINTS
+   ===================================
+   Breakpoints will be set to exact values from Figma design specifications
+*/
+
+/* Mobile First Approach - Base styles are for mobile */
+
+/* ===================================
+   TABLET STYLES
+   ===================================
+   Tablet breakpoint - exact value from Figma
+*/
+@media screen and (min-width: 768px) {
+  /* Tablet-specific styles will be implemented based on Figma tablet design */
+  
+  .container {
+    padding: 0 var(--spacing-lg);
+  }
+  
+  /* Navigation adjustments for tablet */
+  .mobile-menu-toggle {
+    display: none;
+  }
+  
+  .navigation {
+    /* Tablet navigation layout from Figma */
+  }
+  
+  /* Hero section tablet adjustments */
+  .hero {
+    /* Tablet hero layout from Figma */
+  }
+  
+  .hero-headline {
+    /* Tablet hero headline sizing from Figma */
+  }
+  
+  /* Content sections tablet layout */
+  .grid-2 {
+    /* Maintain 2-column grid on tablet */
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-3 {
+    /* Adjust to 2-column on tablet if specified in Figma */
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-4 {
+    /* Adjust to 2-column on tablet if specified in Figma */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===================================
+   DESKTOP STYLES
+   ===================================
+   Desktop breakpoint - exact value from Figma
+*/
+@media screen and (min-width: 1024px) {
+  /* Desktop-specific styles will be implemented based on Figma desktop design */
+  
+  .container {
+    padding: 0 var(--spacing-xl);
+  }
+  
+  /* Navigation desktop layout */
+  .navigation {
+    /* Desktop navigation layout from Figma */
+  }
+  
+  .nav-list {
+    /* Desktop navigation list layout from Figma */
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-item {
+    /* Desktop navigation item spacing from Figma */
+  }
+  
+  /* Hero section desktop layout */
+  .hero {
+    /* Desktop hero layout from Figma */
+  }
+  
+  .hero-content {
+    /* Desktop hero content positioning from Figma */
+  }
+  
+  .hero-headline {
+    /* Desktop hero headline sizing from Figma */
+  }
+  
+  /* Content sections desktop layout */
+  .content-section {
+    /* Desktop section spacing from Figma */
+    padding: var(--spacing-2xl) 0;
+  }
+  
+  .grid-3 {
+    /* Restore 3-column grid on desktop */
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid-4 {
+    /* Restore 4-column grid on desktop */
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* Button sizing adjustments for desktop */
+  .btn {
+    /* Desktop button sizing from Figma */
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+}
+
+/* ===================================
+   LARGE DESKTOP STYLES
+   ===================================
+   Large desktop breakpoint - if specified in Figma
+*/
+@media screen and (min-width: 1440px) {
+  /* Large desktop-specific styles based on Figma specifications */
+  
+  .container {
+    /* Large desktop container max-width from Figma */
+    max-width: [FIGMA_LARGE_DESKTOP_MAX_WIDTH];
+  }
+  
+  /* Hero section large desktop adjustments */
+  .hero {
+    /* Large desktop hero layout from Figma */
+  }
+  
+  /* Content sections large desktop spacing */
+  .content-section {
+    /* Large desktop section spacing from Figma */
+  }
+}
+
+/* ===================================
+   MOBILE-SPECIFIC STYLES
+   ===================================
+   Mobile breakpoint - exact value from Figma mobile design
+*/
+@media screen and (max-width: 767px) {
+  /* Mobile-specific overrides and styles */
+  
+  /* Mobile navigation */
+  .navigation {
+    /* Mobile navigation layout from Figma */
+  }
+  
+  .nav-list {
+    /* Mobile navigation list - hidden by default */
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-background);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .nav-list.active {
+    /* Show mobile menu when active */
+    display: flex;
+  }
+  
+  .mobile-menu-toggle {
+    /* Show mobile menu toggle on mobile */
+    display: block;
+  }
+  
+  /* Mobile hero adjustments */
+  .hero {
+    /* Mobile hero layout from Figma */
+    text-align: center;
+  }
+  
+  .hero-headline {
+    /* Mobile hero headline sizing from Figma */
+  }
+  
+  .hero-subheadline {
+    /* Mobile hero subheadline sizing from Figma */
+  }
+  
+  /* Mobile content sections */
+  .content-section {
+    /* Mobile section spacing from Figma */
+    padding: var(--spacing-lg) 0;
+  }
+  
+  /* Mobile grid adjustments */
+  .grid,
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    /* All grids become single column on mobile */
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  /* Mobile button adjustments */
+  .btn {
+    /* Mobile button sizing from Figma */
+    width: 100%;
+    padding: var(--spacing-md);
+  }
+  
+  /* Mobile form adjustments */
+  .form-input {
+    /* Mobile form input sizing from Figma */
+    padding: var(--spacing-md);
+  }
+  
+  /* Mobile card adjustments */
+  .card {
+    /* Mobile card spacing from Figma */
+    padding: var(--spacing-md);
+  }
+}
+
+/* ===================================
+   RESPONSIVE TYPOGRAPHY
+   ===================================
+   Typography scaling based on Figma responsive specifications
+*/
+
+/* Mobile typography scaling */
+@media screen and (max-width: 767px) {
+  :root {
+    /* Mobile font size adjustments from Figma */
+    --font-size-h1: [FIGMA_MOBILE_H1_SIZE];
+    --font-size-h2: [FIGMA_MOBILE_H2_SIZE];
+    --font-size-h3: [FIGMA_MOBILE_H3_SIZE];
+    --font-size-body: [FIGMA_MOBILE_BODY_SIZE];
+  }
+}
+
+/* Tablet typography scaling */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    /* Tablet font size adjustments from Figma */
+    --font-size-h1: [FIGMA_TABLET_H1_SIZE];
+    --font-size-h2: [FIGMA_TABLET_H2_SIZE];
+    --font-size-h3: [FIGMA_TABLET_H3_SIZE];
+    --font-size-body: [FIGMA_TABLET_BODY_SIZE];
+  }
+}
+
+/* Desktop typography scaling */
+@media screen and (min-width: 1024px) {
+  :root {
+    /* Desktop font size adjustments from Figma */
+    --font-size-h1: [FIGMA_DESKTOP_H1_SIZE];
+    --font-size-h2: [FIGMA_DESKTOP_H2_SIZE];
+    --font-size-h3: [FIGMA_DESKTOP_H3_SIZE];
+    --font-size-body: [FIGMA_DESKTOP_BODY_SIZE];
+  }
+}
+
+/* ===================================
+   RESPONSIVE SPACING
+   ===================================
+   Spacing adjustments based on Figma responsive specifications
+*/
+
+/* Mobile spacing adjustments */
+@media screen and (max-width: 767px) {
+  :root {
+    /* Mobile spacing adjustments from Figma */
+    --spacing-xs: [FIGMA_MOBILE_XS_SPACING];
+    --spacing-sm: [FIGMA_MOBILE_SM_SPACING];
+    --spacing-md: [FIGMA_MOBILE_MD_SPACING];
+    --spacing-lg: [FIGMA_MOBILE_LG_SPACING];
+    --spacing-xl: [FIGMA_MOBILE_XL_SPACING];
+    --spacing-2xl: [FIGMA_MOBILE_2XL_SPACING];
+  }
+}
+
+/* ===================================
+   RESPONSIVE UTILITIES
+   ===================================
+   Utility classes for responsive behavior
+*/
+
+/* Hide elements on mobile */
+.hide-mobile {
+  @media screen and (max-width: 767px) {
+    display: none !important;
+  }
+}
+
+/* Hide elements on tablet */
+.hide-tablet {
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    display: none !important;
+  }
+}
+
+/* Hide elements on desktop */
+.hide-desktop {
+  @media screen and (min-width: 1024px) {
+    display: none !important;
+  }
+}
+
+/* Show only on mobile */
+.show-mobile {
+  display: none !important;
+  @media screen and (max-width: 767px) {
+    display: block !important;
+  }
+}
+
+/* Show only on tablet */
+.show-tablet {
+  display: none !important;
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    display: block !important;
+  }
+}
+
+/* Show only on desktop */
+.show-desktop {
+  display: none !important;
+  @media screen and (min-width: 1024px) {
+    display: block !important;
+  }
+}
