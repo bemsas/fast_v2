@@ -22,43 +22,100 @@ document.addEventListener('DOMContentLoaded', function() {
  * Navigation interactions will be implemented in task 3
  */
 function initializeNavigation() {
-    // Mobile menu toggle functionality - to be implemented in task 3
+    // Mobile menu toggle functionality
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const mobileMenu = document.querySelector('.mobile-menu');
-    const navList = document.querySelector('.nav-list');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
     
-    if (mobileMenuToggle && navList) {
+    if (mobileMenuToggle && mobileMenu) {
+        // Toggle mobile menu visibility
         mobileMenuToggle.addEventListener('click', function() {
-            // Toggle mobile menu visibility
-            navList.classList.toggle('active');
+            const isExpanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+            const newState = !isExpanded;
             
-            // Update aria-expanded attribute for accessibility
-            const isExpanded = navList.classList.contains('active');
-            mobileMenuToggle.setAttribute('aria-expanded', isExpanded);
+            // Update aria-expanded attribute
+            mobileMenuToggle.setAttribute('aria-expanded', newState);
+            
+            // Update mobile menu visibility
+            mobileMenu.setAttribute('aria-hidden', !newState);
+            
+            // Update tabindex for mobile menu links
+            mobileNavLinks.forEach(link => {
+                link.setAttribute('tabindex', newState ? '0' : '-1');
+            });
+            
+            // Focus management
+            if (newState) {
+                // Menu opened - focus first link
+                if (mobileNavLinks.length > 0) {
+                    setTimeout(() => mobileNavLinks[0].focus(), 100);
+                }
+            }
         });
     }
     
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(event) {
-        if (navList && navList.classList.contains('active')) {
+        if (mobileMenu && mobileMenu.getAttribute('aria-hidden') === 'false') {
             if (!event.target.closest('.navigation')) {
-                navList.classList.remove('active');
-                if (mobileMenuToggle) {
-                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
-                }
+                closeMobileMenu();
             }
         }
     });
     
     // Close mobile menu on escape key
     document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape' && navList && navList.classList.contains('active')) {
-            navList.classList.remove('active');
+        if (event.key === 'Escape' && mobileMenu && mobileMenu.getAttribute('aria-hidden') === 'false') {
+            closeMobileMenu();
             if (mobileMenuToggle) {
-                mobileMenuToggle.setAttribute('aria-expanded', 'false');
                 mobileMenuToggle.focus();
             }
         }
+    });
+    
+    // Close mobile menu when clicking on mobile nav links
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            closeMobileMenu();
+        });
+    });
+    
+    // Helper function to close mobile menu
+    function closeMobileMenu() {
+        if (mobileMenuToggle && mobileMenu) {
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            mobileMenu.setAttribute('aria-hidden', 'true');
+            mobileNavLinks.forEach(link => {
+                link.setAttribute('tabindex', '-1');
+            });
+        }
+    }
+    
+    // Handle keyboard navigation within mobile menu
+    mobileNavLinks.forEach((link, index) => {
+        link.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowDown') {
+                event.preventDefault();
+                const nextIndex = (index + 1) % mobileNavLinks.length;
+                mobileNavLinks[nextIndex].focus();
+            } else if (event.key === 'ArrowUp') {
+                event.preventDefault();
+                const prevIndex = index === 0 ? mobileNavLinks.length - 1 : index - 1;
+                mobileNavLinks[prevIndex].focus();
+            }
+        });
+    });
+    
+    // Add smooth hover effects for desktop navigation
+    const desktopNavLinks = document.querySelectorAll('.nav-link');
+    desktopNavLinks.forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-1px)';
+        });
+        
+        link.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
     });
 }
 
@@ -211,16 +268,18 @@ window.addEventListener('resize', function() {
 });
 
 function handleBreakpointChange(breakpoint) {
-    // Breakpoint-specific functionality will be implemented based on Figma specifications
-    const navList = document.querySelector('.nav-list');
+    // Breakpoint-specific functionality
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
     
-    if (breakpoint !== 'mobile' && navList) {
+    if (breakpoint !== 'mobile' && mobileMenu && mobileMenuToggle) {
         // Close mobile menu on larger screens
-        navList.classList.remove('active');
-        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        if (mobileMenuToggle) {
-            mobileMenuToggle.setAttribute('aria-expanded', 'false');
-        }
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        mobileNavLinks.forEach(link => {
+            link.setAttribute('tabindex', '-1');
+        });
     }
 }
 

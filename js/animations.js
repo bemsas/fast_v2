@@ -212,21 +212,23 @@ class NavigationAnimations {
     
     setupMobileMenuAnimation() {
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        const navList = document.querySelector('.nav-list');
+        const mobileMenu = document.querySelector('.mobile-menu');
         
-        if (mobileMenuToggle && navList) {
+        if (mobileMenuToggle && mobileMenu) {
             mobileMenuToggle.addEventListener('click', () => {
-                this.animateMobileMenu(navList);
+                setTimeout(() => {
+                    this.animateMobileMenu(mobileMenu);
+                }, 50); // Small delay to ensure menu visibility is updated
             });
         }
     }
     
-    animateMobileMenu(navList) {
-        const isActive = navList.classList.contains('active');
+    animateMobileMenu(mobileMenu) {
+        const isVisible = mobileMenu.getAttribute('aria-hidden') === 'false';
         
-        if (isActive) {
+        if (isVisible) {
             // Animate menu items in
-            const menuItems = navList.querySelectorAll('.nav-item');
+            const menuItems = mobileMenu.querySelectorAll('.mobile-nav-item');
             menuItems.forEach((item, index) => {
                 item.style.animation = `slideInFromTop 0.3s ease-out ${index * 0.1}s both`;
             });

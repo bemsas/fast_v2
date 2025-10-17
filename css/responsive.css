@@ -27,12 +27,48 @@
   }
   
   /* Navigation adjustments for tablet */
+  .header {
+    height: 75px; /* Tablet header height from Figma */
+  }
+  
+  .navigation {
+    height: 75px;
+  }
+  
+  .nav-container {
+    padding: 0 var(--spacing-6);
+  }
+  
+  .logo-image {
+    height: 36px; /* Medium logo size on tablet */
+    max-width: 110px;
+  }
+  
+  /* Show desktop navigation on tablet */
+  .nav-list {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-6); /* Slightly smaller gap on tablet */
+  }
+  
+  .nav-cta {
+    display: block;
+    margin-left: var(--spacing-4);
+  }
+  
+  /* Hide mobile menu toggle on tablet */
   .mobile-menu-toggle {
     display: none;
   }
   
-  .navigation {
-    /* Tablet navigation layout from Figma */
+  /* Hide mobile menu on tablet */
+  .mobile-menu {
+    display: none;
+  }
+  
+  /* Adjust body padding for tablet header */
+  body {
+    padding-top: 75px;
   }
   
   /* Hero section tablet adjustments */
@@ -74,18 +110,46 @@
   }
   
   /* Navigation desktop layout */
-  .navigation {
-    /* Desktop navigation layout from Figma */
+  .header {
+    height: 80px; /* Desktop header height from Figma */
   }
   
+  .navigation {
+    height: 80px;
+  }
+  
+  .nav-container {
+    padding: 0 var(--spacing-8);
+  }
+  
+  .logo-image {
+    height: 40px; /* Full logo size on desktop */
+    max-width: 120px;
+  }
+  
+  /* Show desktop navigation */
   .nav-list {
-    /* Desktop navigation list layout from Figma */
     display: flex;
     align-items: center;
   }
   
-  .nav-item {
-    /* Desktop navigation item spacing from Figma */
+  .nav-cta {
+    display: block;
+  }
+  
+  /* Hide mobile menu toggle on desktop */
+  .mobile-menu-toggle {
+    display: none;
+  }
+  
+  /* Hide mobile menu on desktop */
+  .mobile-menu {
+    display: none;
+  }
+  
+  /* Adjust body padding for desktop header */
+  body {
+    padding-top: 80px;
   }
   
   /* Hero section desktop layout */
@@ -156,31 +220,41 @@
 @media screen and (max-width: 767px) {
   /* Mobile-specific overrides and styles */
   
-  /* Mobile navigation */
+  /* Mobile header and navigation */
+  .header {
+    height: 70px; /* Adjust based on Figma mobile specifications */
+  }
+  
   .navigation {
-    /* Mobile navigation layout from Figma */
+    height: 70px;
   }
   
+  .nav-container {
+    padding: 0 var(--spacing-4);
+  }
+  
+  .logo-image {
+    height: 32px; /* Smaller logo on mobile */
+    max-width: 100px;
+  }
+  
+  /* Hide desktop navigation on mobile */
   .nav-list {
-    /* Mobile navigation list - hidden by default */
     display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: var(--color-background);
-    box-shadow: var(--shadow-md);
   }
   
-  .nav-list.active {
-    /* Show mobile menu when active */
+  .nav-cta {
+    display: none;
+  }
+  
+  /* Show mobile menu toggle on mobile */
+  .mobile-menu-toggle {
     display: flex;
   }
   
-  .mobile-menu-toggle {
-    /* Show mobile menu toggle on mobile */
-    display: block;
+  /* Adjust body padding for mobile header */
+  body {
+    padding-top: 70px;
   }
   
   /* Mobile hero adjustments */

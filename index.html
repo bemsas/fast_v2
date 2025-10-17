@@ -40,7 +40,74 @@
     <!-- Header/Navigation Section -->
     <header class="header" role="banner">
         <nav class="navigation" role="navigation" aria-label="Main navigation">
-            <!-- Navigation content will be implemented in task 3 -->
+            <div class="nav-container">
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <a href="/" class="logo-link" aria-label="Venipak - Go to homepage">
+                        <img src="assets/images/venipak-logo.svg" alt="Venipak" class="logo-image" width="120" height="40">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation Menu -->
+                <ul class="nav-list" role="menubar">
+                    <li class="nav-item" role="none">
+                        <a href="#services" class="nav-link" role="menuitem" aria-current="page">Services</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="#solutions" class="nav-link" role="menuitem">Solutions</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="#tracking" class="nav-link" role="menuitem">Tracking</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="#about" class="nav-link" role="menuitem">About</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="#contact" class="nav-link" role="menuitem">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Call-to-Action Button -->
+                <div class="nav-cta">
+                    <a href="#get-quote" class="btn btn-primary nav-cta-button" role="button">Get Quote</a>
+                </div>
+
+                <!-- Mobile Menu Toggle Button -->
+                <button class="mobile-menu-toggle" 
+                        type="button" 
+                        aria-controls="mobile-menu" 
+                        aria-expanded="false" 
+                        aria-label="Toggle navigation menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="sr-only">Menu</span>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div class="mobile-menu" id="mobile-menu" role="menu" aria-hidden="true">
+                <ul class="mobile-nav-list" role="none">
+                    <li class="mobile-nav-item" role="none">
+                        <a href="#services" class="mobile-nav-link" role="menuitem" tabindex="-1">Services</a>
+                    </li>
+                    <li class="mobile-nav-item" role="none">
+                        <a href="#solutions" class="mobile-nav-link" role="menuitem" tabindex="-1">Solutions</a>
+                    </li>
+                    <li class="mobile-nav-item" role="none">
+                        <a href="#tracking" class="mobile-nav-link" role="menuitem" tabindex="-1">Tracking</a>
+                    </li>
+                    <li class="mobile-nav-item" role="none">
+                        <a href="#about" class="mobile-nav-link" role="menuitem" tabindex="-1">About</a>
+                    </li>
+                    <li class="mobile-nav-item" role="none">
+                        <a href="#contact" class="mobile-nav-link" role="menuitem" tabindex="-1">Contact</a>
+                    </li>
+                    <li class="mobile-nav-item mobile-nav-cta" role="none">
+                        <a href="#get-quote" class="btn btn-primary mobile-cta-button" role="menuitem" tabindex="-1">Get Quote</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
