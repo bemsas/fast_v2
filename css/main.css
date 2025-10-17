@@ -19,42 +19,42 @@
      All color values to be replaced with exact hex values from Figma design
   */
   
-  /* Primary Brand Colors */
-  --color-primary: #0066cc;
-  --color-primary-light: #3385d6;
-  --color-primary-dark: #004499;
-  --color-secondary: #ff6b35;
-  --color-secondary-light: #ff8c5a;
-  --color-secondary-dark: #e55a2b;
+  /* Primary Brand Colors - Venipak Brand */
+  --color-primary: #9339F2;
+  --color-primary-light: #A855F7;
+  --color-primary-dark: #7C2D12;
+  --color-secondary: #9339F2;
+  --color-secondary-light: #A855F7;
+  --color-secondary-dark: #7C2D12;
   
-  /* Text Colors */
-  --color-text-primary: #1a1a1a;
-  --color-text-secondary: #666666;
-  --color-text-muted: #999999;
-  --color-text-inverse: #ffffff;
-  --color-heading: #1a1a1a;
+  /* Text Colors - Venipak Grayscale */
+  --color-text-primary: #000000;
+  --color-text-secondary: #808080;
+  --color-text-muted: #BFBFBF;
+  --color-text-inverse: #FFFFFF;
+  --color-heading: #000000;
   
-  /* Background Colors */
-  --color-background: #ffffff;
-  --color-background-secondary: #f8f9fa;
-  --color-background-tertiary: #e9ecef;
-  --color-surface: #ffffff;
-  --color-surface-elevated: #ffffff;
+  /* Background Colors - Venipak Grayscale */
+  --color-background: #FFFFFF;
+  --color-background-secondary: #F7F7F7;
+  --color-background-tertiary: #E6E6E6;
+  --color-surface: #FFFFFF;
+  --color-surface-elevated: #FFFFFF;
   
-  /* Interactive Colors */
-  --color-link: #0066cc;
-  --color-link-hover: #004499;
-  --color-link-visited: #551a8b;
-  --color-button-primary: #0066cc;
-  --color-button-primary-hover: #004499;
-  --color-button-secondary: #6c757d;
-  --color-button-secondary-hover: #5a6268;
+  /* Interactive Colors - Venipak Brand */
+  --color-link: #9339F2;
+  --color-link-hover: #7C2D12;
+  --color-link-visited: #7C2D12;
+  --color-button-primary: #9339F2;
+  --color-button-primary-hover: #7C2D12;
+  --color-button-secondary: #F7F7F7;
+  --color-button-secondary-hover: #E6E6E6;
   
-  /* Border and Divider Colors */
-  --color-border: #dee2e6;
-  --color-border-light: #f1f3f4;
-  --color-border-dark: #adb5bd;
-  --color-divider: #e9ecef;
+  /* Border and Divider Colors - Venipak Grayscale */
+  --color-border: #E6E6E6;
+  --color-border-light: #F7F7F7;
+  --color-border-dark: #BFBFBF;
+  --color-divider: #E6E6E6;
   
   /* Status and Feedback Colors */
   --color-success: #[FIGMA_SUCCESS_COLOR];
@@ -73,17 +73,17 @@
      All typography values to be replaced with exact specifications from Figma
   */
   
-  /* Font Families */
-  --font-family-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  --font-family-secondary: Georgia, 'Times New Roman', Times, serif;
-  --font-family-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  --font-family-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  /* Font Families - Venipak Brand (Inter) */
+  --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-family-secondary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-family-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-family-mono: 'Inter', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
   
-  /* Font Sizes - Exact pixel/rem values from Figma */
-  --font-size-xs: 0.75rem; /* 12px */
+  /* Font Sizes - Venipak Figma Specifications */
+  --font-size-xs: 0.75rem; /* 12px - Button/Strong/Small */
   --font-size-sm: 0.875rem; /* 14px */
-  --font-size-base: 1rem; /* 16px */
-  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-base: 1rem; /* 16px - Base body text */
+  --font-size-lg: 1.125rem; /* 18px - Paragraph/Regular/Small line-height */
   --font-size-xl: 1.25rem; /* 20px */
   --font-size-2xl: 1.5rem; /* 24px */
   --font-size-3xl: 1.875rem; /* 30px */
@@ -271,7 +271,7 @@ body {
   background-color: var(--color-background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding-top: 80px; /* Account for fixed header - adjust based on Figma */
+  padding-top: 48px; /* Account for fixed header - Venipak height */
 }
 
 /* ===================================

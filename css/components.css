@@ -85,16 +85,16 @@
 /* Navigation Container */
 .navigation {
   width: 100%;
-  height: 80px; /* Adjust based on Figma specifications */
+  height: 48px; /* Venipak top-bar height from Figma */
 }
 
 .nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: var(--container-max);
+  max-width: 1512px; /* Venipak container width from Figma */
   margin: 0 auto;
-  padding: 0 var(--spacing-6);
+  padding: 8px 144px; /* Venipak top-bar padding from Figma */
   height: 100%;
 }
 
@@ -134,7 +134,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: var(--spacing-8); /* Adjust spacing based on Figma */
+  gap: 16px; /* Venipak navigation gap from Figma */
 }
 
 .nav-item {
@@ -143,15 +143,17 @@
 
 .nav-link {
   display: block;
-  padding: var(--spacing-3) var(--spacing-4);
+  padding: 0px 8px; /* Venipak button padding from Figma */
   color: var(--color-text-primary);
   font-family: var(--font-family-primary);
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-xs); /* 12px - Button/Strong/Small from Figma */
+  font-weight: 500; /* Button/Strong/Small weight from Figma */
+  line-height: 16px; /* Button/Strong/Small line-height from Figma */
   text-decoration: none;
-  border-radius: var(--border-radius-sm);
+  border-radius: 8px; /* Venipak button border-radius from Figma */
   transition: all 0.3s ease;
   position: relative;
+  height: 16px;
 }
 
 .nav-link:hover {
@@ -173,13 +175,12 @@
 .nav-link[aria-current="page"]::after {
   content: '';
   position: absolute;
-  bottom: -2px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 20px;
-  height: 2px;
+  bottom: -3px; /* Venipak underline position from Figma */
+  left: 0px;
+  width: 100%;
+  height: 1px; /* Venipak underline height from Figma */
   background-color: var(--color-primary);
-  border-radius: 1px;
+  border-radius: 0;
 }
 
 /* Call-to-Action Button in Navigation */
@@ -189,16 +190,21 @@
 }
 
 .nav-cta-button {
-  padding: var(--spacing-3) var(--spacing-6);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-semibold);
-  border-radius: var(--border-radius-md);
+  padding: 8px; /* Venipak button-icon padding from Figma */
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  border-radius: 0;
   transition: all 0.3s ease;
+  width: 32px; /* Venipak button-icon width from Figma */
+  height: 32px; /* Venipak button-icon height from Figma */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
 }
 
 /* Mobile Menu Toggle Button */

@@ -28,15 +28,15 @@
   
   /* Navigation adjustments for tablet */
   .header {
-    height: 75px; /* Tablet header height from Figma */
+    height: 48px; /* Venipak header height */
   }
   
   .navigation {
-    height: 75px;
+    height: 48px;
   }
   
   .nav-container {
-    padding: 0 var(--spacing-6);
+    padding: 8px 32px; /* Medium padding for tablet */
   }
   
   .logo-image {
@@ -68,7 +68,7 @@
   
   /* Adjust body padding for tablet header */
   body {
-    padding-top: 75px;
+    padding-top: 48px;
   }
   
   /* Hero section tablet adjustments */
@@ -111,15 +111,15 @@
   
   /* Navigation desktop layout */
   .header {
-    height: 80px; /* Desktop header height from Figma */
+    height: 48px; /* Venipak header height */
   }
   
   .navigation {
-    height: 80px;
+    height: 48px;
   }
   
   .nav-container {
-    padding: 0 var(--spacing-8);
+    padding: 8px 144px; /* Full Venipak padding for desktop */
   }
   
   .logo-image {
@@ -149,7 +149,7 @@
   
   /* Adjust body padding for desktop header */
   body {
-    padding-top: 80px;
+    padding-top: 48px;
   }
   
   /* Hero section desktop layout */
@@ -222,15 +222,15 @@
   
   /* Mobile header and navigation */
   .header {
-    height: 70px; /* Adjust based on Figma mobile specifications */
+    height: 48px; /* Venipak header height */
   }
   
   .navigation {
-    height: 70px;
+    height: 48px;
   }
   
   .nav-container {
-    padding: 0 var(--spacing-4);
+    padding: 8px 16px; /* Reduced padding for mobile */
   }
   
   .logo-image {
@@ -254,7 +254,7 @@
   
   /* Adjust body padding for mobile header */
   body {
-    padding-top: 70px;
+    padding-top: 48px;
   }
   
   /* Mobile hero adjustments */
