@@ -19,13 +19,13 @@
      All color values to be replaced with exact hex values from Figma design
   */
   
-  /* Primary Brand Colors - Venipak Brand */
-  --color-primary: #9339F2;
-  --color-primary-light: #A855F7;
-  --color-primary-dark: #7C2D12;
-  --color-secondary: #9339F2;
-  --color-secondary-light: #A855F7;
-  --color-secondary-dark: #7C2D12;
+  /* Primary Brand Colors - Official Venipak Brand */
+  --color-primary: #643395;
+  --color-primary-light: #9339F2;
+  --color-primary-dark: #4A2470;
+  --color-secondary: #E7F43B;
+  --color-secondary-light: #F0F76B;
+  --color-secondary-dark: #D4E020;
   
   /* Text Colors - Venipak Grayscale */
   --color-text-primary: #000000;
@@ -41,14 +41,14 @@
   --color-surface: #FFFFFF;
   --color-surface-elevated: #FFFFFF;
   
-  /* Interactive Colors - Venipak Brand */
-  --color-link: #9339F2;
-  --color-link-hover: #7C2D12;
-  --color-link-visited: #7C2D12;
-  --color-button-primary: #9339F2;
-  --color-button-primary-hover: #7C2D12;
-  --color-button-secondary: #F7F7F7;
-  --color-button-secondary-hover: #E6E6E6;
+  /* Interactive Colors - Official Venipak Brand */
+  --color-link: #643395;
+  --color-link-hover: #4A2470;
+  --color-link-visited: #4A2470;
+  --color-button-primary: #643395;
+  --color-button-primary-hover: #4A2470;
+  --color-button-secondary: #E7F43B;
+  --color-button-secondary-hover: #D4E020;
   
   /* Border and Divider Colors - Venipak Grayscale */
   --color-border: #E6E6E6;
@@ -62,10 +62,10 @@
   --color-error: #[FIGMA_ERROR_COLOR];
   --color-info: #[FIGMA_INFO_COLOR];
   
-  /* Accent and Highlight Colors */
-  --color-accent: #[FIGMA_ACCENT_COLOR];
-  --color-highlight: #[FIGMA_HIGHLIGHT_COLOR];
-  --color-overlay: #[FIGMA_OVERLAY_COLOR];
+  /* Accent and Highlight Colors - Official Venipak Brand */
+  --color-accent: #E7F43B;
+  --color-highlight: #E7F43B;
+  --color-overlay: rgba(100, 51, 149, 0.8);
   
   /* ===================================
      TYPOGRAPHY - EXTRACTED FROM FIGMA
@@ -73,10 +73,10 @@
      All typography values to be replaced with exact specifications from Figma
   */
   
-  /* Font Families - Venipak Brand (Inter) */
+  /* Font Families - Official Venipak Brand */
   --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   --font-family-secondary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  --font-family-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-family-heading: 'Roobert PRO', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   --font-family-mono: 'Inter', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
   
   /* Font Sizes - Venipak Figma Specifications */

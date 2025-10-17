@@ -40,7 +40,7 @@
   }
   
   .logo-image {
-    height: 36px; /* Medium logo size on tablet */
+    height: 22px; /* Medium logo size on tablet */
     max-width: 110px;
   }
   
@@ -123,7 +123,7 @@
   }
   
   .logo-image {
-    height: 40px; /* Full logo size on desktop */
+    height: 23px; /* Full logo size on desktop */
     max-width: 120px;
   }
   
@@ -234,7 +234,7 @@
   }
   
   .logo-image {
-    height: 32px; /* Smaller logo on mobile */
+    height: 20px; /* Smaller logo on mobile */
     max-width: 100px;
   }
   

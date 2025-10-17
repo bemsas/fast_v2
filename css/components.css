@@ -114,9 +114,10 @@
 }
 
 .logo-image {
-  height: 40px; /* Adjust based on Figma logo specifications */
+  height: 23px; /* Official Venipak logo proportions */
   width: auto;
-  max-width: 120px; /* Adjust based on Figma logo specifications */
+  max-width: 120px;
+  object-fit: contain;
 }
 
 .logo-placeholder {
