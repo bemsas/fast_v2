@@ -119,6 +119,14 @@
   max-width: 120px; /* Adjust based on Figma logo specifications */
 }
 
+.logo-placeholder {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
 /* Desktop Navigation List */
 .nav-list {
   display: flex;
