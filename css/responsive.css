@@ -45,15 +45,17 @@
   }
   
   /* Show desktop navigation on tablet */
-  .nav-list {
+  .nav-center {
     display: flex;
-    align-items: center;
-    gap: var(--spacing-6); /* Slightly smaller gap on tablet */
   }
   
-  .nav-cta {
-    display: block;
-    margin-left: var(--spacing-4);
+  .nav-right {
+    display: flex;
+    gap: 12px; /* Slightly smaller gap on tablet */
+  }
+  
+  .nav-list {
+    gap: 12px; /* Slightly smaller gap on tablet */
   }
   
   /* Hide mobile menu toggle on tablet */
@@ -128,13 +130,12 @@
   }
   
   /* Show desktop navigation */
-  .nav-list {
+  .nav-center {
     display: flex;
-    align-items: center;
   }
   
-  .nav-cta {
-    display: block;
+  .nav-right {
+    display: flex;
   }
   
   /* Hide mobile menu toggle on desktop */
@@ -239,12 +240,17 @@
   }
   
   /* Hide desktop navigation on mobile */
-  .nav-list {
+  .nav-center {
     display: none;
   }
   
-  .nav-cta {
+  .nav-right {
     display: none;
+  }
+  
+  /* Show simplified mobile layout */
+  .nav-container {
+    justify-content: space-between;
   }
   
   /* Show mobile menu toggle on mobile */

@@ -33,39 +33,54 @@
     <header class="header" role="banner">
         <nav class="navigation" role="navigation" aria-label="Main navigation">
             <div class="nav-container">
-                <!-- Logo -->
-                <div class="nav-logo">
-                    <a href="/" class="logo-link" aria-label="Venipak - Go to homepage">
-                        <img src="https://cdn.brandfetch.io/id5H-TZ6nY/theme/light/logo.svg?c=1bxidaciroxw1hJIg61Gx" 
-                             alt="Venipak" 
-                             class="logo-image" 
-                             width="120" 
-                             height="23">
-                    </a>
+                <!-- Left Section: Language Selector -->
+                <div class="nav-left">
+                    <div class="language-selector">
+                        <select class="language-select" aria-label="Select language">
+                            <option value="lt">LT</option>
+                            <option value="en">EN</option>
+                            <option value="lv">LV</option>
+                            <option value="ee">EE</option>
+                        </select>
+                    </div>
                 </div>
 
-                <!-- Desktop Navigation Menu -->
-                <ul class="nav-list" role="menubar">
-                    <li class="nav-item" role="none">
-                        <a href="#services" class="nav-link" role="menuitem" aria-current="page">Services</a>
-                    </li>
-                    <li class="nav-item" role="none">
-                        <a href="#solutions" class="nav-link" role="menuitem">Solutions</a>
-                    </li>
-                    <li class="nav-item" role="none">
-                        <a href="#tracking" class="nav-link" role="menuitem">Tracking</a>
-                    </li>
-                    <li class="nav-item" role="none">
-                        <a href="#about" class="nav-link" role="menuitem">About</a>
-                    </li>
-                    <li class="nav-item" role="none">
-                        <a href="#contact" class="nav-link" role="menuitem">Contact</a>
-                    </li>
-                </ul>
+                <!-- Center Section: Main Navigation -->
+                <nav class="nav-center" role="navigation" aria-label="Main navigation">
+                    <ul class="nav-list" role="menubar">
+                        <li class="nav-item" role="none">
+                            <a href="#kontaktai" class="nav-link" role="menuitem">Kontaktai</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="#karjera" class="nav-link" role="menuitem">Karjera</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="#apie-mus" class="nav-link" role="menuitem">Apie mus</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="#tvarumas" class="nav-link" role="menuitem">Tvarumas</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="#naujienos" class="nav-link" role="menuitem">Naujienos</a>
+                        </li>
+                    </ul>
+                </nav>
 
-                <!-- Call-to-Action Button -->
-                <div class="nav-cta">
-                    <a href="#get-quote" class="btn btn-primary nav-cta-button" role="button">Get Quote</a>
+                <!-- Right Section: Secondary Navigation -->
+                <div class="nav-right">
+                    <ul class="nav-secondary" role="menubar">
+                        <li class="nav-secondary-item" role="none">
+                            <a href="#verslo-klientai" class="nav-secondary-link" role="menuitem">Verslo klientų vardai</a>
+                        </li>
+                        <li class="nav-secondary-item" role="none">
+                            <a href="#registracija" class="nav-secondary-link" role="menuitem">Registracija</a>
+                        </li>
+                    </ul>
+                    <button class="search-button" type="button" aria-label="Search">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.333 12.667A5.333 5.333 0 1 0 7.333 2a5.333 5.333 0 0 0 0 10.667ZM14 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
                 </div>
 
                 <!-- Mobile Menu Toggle Button -->
@@ -85,22 +100,25 @@
             <div class="mobile-menu" id="mobile-menu" role="menu" aria-hidden="true">
                 <ul class="mobile-nav-list" role="none">
                     <li class="mobile-nav-item" role="none">
-                        <a href="#services" class="mobile-nav-link" role="menuitem" tabindex="-1">Services</a>
+                        <a href="#kontaktai" class="mobile-nav-link" role="menuitem" tabindex="-1">Kontaktai</a>
                     </li>
                     <li class="mobile-nav-item" role="none">
-                        <a href="#solutions" class="mobile-nav-link" role="menuitem" tabindex="-1">Solutions</a>
+                        <a href="#karjera" class="mobile-nav-link" role="menuitem" tabindex="-1">Karjera</a>
                     </li>
                     <li class="mobile-nav-item" role="none">
-                        <a href="#tracking" class="mobile-nav-link" role="menuitem" tabindex="-1">Tracking</a>
+                        <a href="#apie-mus" class="mobile-nav-link" role="menuitem" tabindex="-1">Apie mus</a>
                     </li>
                     <li class="mobile-nav-item" role="none">
-                        <a href="#about" class="mobile-nav-link" role="menuitem" tabindex="-1">About</a>
+                        <a href="#tvarumas" class="mobile-nav-link" role="menuitem" tabindex="-1">Tvarumas</a>
                     </li>
                     <li class="mobile-nav-item" role="none">
-                        <a href="#contact" class="mobile-nav-link" role="menuitem" tabindex="-1">Contact</a>
+                        <a href="#naujienos" class="mobile-nav-link" role="menuitem" tabindex="-1">Naujienos</a>
                     </li>
-                    <li class="mobile-nav-item mobile-nav-cta" role="none">
-                        <a href="#get-quote" class="btn btn-primary mobile-cta-button" role="menuitem" tabindex="-1">Get Quote</a>
+                    <li class="mobile-nav-item mobile-nav-divider" role="none">
+                        <a href="#verslo-klientai" class="mobile-nav-link" role="menuitem" tabindex="-1">Verslo klientų vardai</a>
+                    </li>
+                    <li class="mobile-nav-item" role="none">
+                        <a href="#registracija" class="mobile-nav-link" role="menuitem" tabindex="-1">Registracija</a>
                     </li>
                 </ul>
             </div>
