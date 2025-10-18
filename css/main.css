@@ -271,7 +271,7 @@ body {
   background-color: var(--color-background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding-top: 48px; /* Account for fixed header - Venipak height */
+  padding-top: 132px; /* Account for fixed header: menu-bar (32px) + top-bar (40px) + navigation (60px) */
 }
 
 /* ===================================

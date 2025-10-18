@@ -31,102 +31,114 @@
 <body>
     <!-- Header/Navigation Section -->
     <header class="header" role="banner">
-        <nav class="navigation" role="navigation" aria-label="Main navigation">
-            <div class="nav-container">
-                <!-- Logo Section -->
-                <div class="nav-logo">
-                    <a href="/" class="logo-link" aria-label="Venipak - Go to homepage">
-                        <img src="https://cdn.brandfetch.io/id5H-TZ6nY/theme/light/logo.svg?c=1bxidaciroxw1hJIg61Gx" 
-                             alt="Venipak" 
-                             class="logo-image" 
-                             width="120" 
-                             height="23">
-                    </a>
+        <!-- Menu Bar - Dark overlay with main sections (Figma: 1274:95372) -->
+        <div class="menu-bar">
+            <div class="menu-bar-background"></div>
+            <div class="menu-bar-content">
+                <nav class="menu-bar-menus" role="navigation" aria-label="Main sections">
+                    <a href="#privatieims" class="menu-bar-link">Privatieims</a>
+                    <a href="#verslui" class="menu-bar-link">Verslui</a>
+                </nav>
+                <div class="menu-bar-items">
+                    <!-- Additional menu items if needed -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Bar - Secondary navigation with utilities (Figma: 1274:94200) -->
+        <div class="top-bar">
+            <div class="top-bar-container">
+                <!-- Left section: Language and links -->
+                <div class="top-bar-left">
+                    <button class="language-selector" type="button" aria-label="Select language">
+                        LT
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <a href="#kontaktai" class="top-bar-link">Kontaktai</a>
+                    <a href="#karjera" class="top-bar-link">Karjera</a>
+                    <a href="#apie-mus" class="top-bar-link">Apie mus</a>
+                    <a href="#tvarumas" class="top-bar-link">Tvarumas</a>
+                    <a href="#naujienos" class="top-bar-link">Naujienos</a>
                 </div>
 
-                <!-- Main Navigation -->
-                <nav class="nav-center" role="navigation" aria-label="Main navigation">
-                    <ul class="nav-list" role="menubar">
-                        <li class="nav-item" role="none">
-                            <a href="#privatieims" class="nav-link" role="menuitem">Privatieims</a>
-                        </li>
-                        <li class="nav-item nav-item-dropdown" role="none">
-                            <a href="#verslui" class="nav-link nav-link-dropdown" role="menuitem" aria-expanded="false">
-                                Verslui
-                                <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                                    <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                <!-- Right section: Login form -->
+                <div class="top-bar-right">
+                    <span class="login-label">Prisijungimas</span>
+                    <input type="text" class="login-input" placeholder="Vartotojo vardas" aria-label="Username">
+                    <input type="password" class="login-input" placeholder="Slaptažodis" aria-label="Password">
+                    <button class="login-button" type="button" aria-label="Login">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
 
-                <!-- Right Section: Action Links -->
+        <!-- Main Navigation Bar (Figma: 1274:94246) -->
+        <nav class="navigation" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <!-- Left: Logo and main menu -->
+                <div class="nav-left">
+                    <a href="/" class="logo-link" aria-label="Venipak - Go to homepage">
+                        <img src="https://cdn.brandfetch.io/id5H-TZ6nY/theme/light/logo.svg?c=1bxidaciroxw1hJIg61Gx"
+                             alt="Venipak"
+                             class="logo-image"
+                             width="148"
+                             height="28">
+                    </a>
+                    <nav class="main-menu" role="navigation" aria-label="Primary navigation">
+                        <!-- Main menu items will go here -->
+                    </nav>
+                </div>
+
+                <!-- Right: Action buttons -->
                 <div class="nav-right">
-                    <ul class="nav-actions" role="menubar">
-                        <li class="nav-action-item" role="none">
-                            <a href="#pastomatai" class="nav-action-link" role="menuitem">
-                                <svg class="nav-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                    <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.2"/>
-                                    <path d="M6 7h4M6 9h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-                                </svg>
-                                Paštomatai
-                            </a>
-                        </li>
-                        <li class="nav-action-item" role="none">
-                            <a href="#siusti-siunta" class="nav-action-link" role="menuitem">Siųsti siuntą</a>
-                        </li>
-                        <li class="nav-action-item" role="none">
-                            <a href="#sekti-siunta" class="nav-action-link" role="menuitem">Sekti siuntą</a>
-                        </li>
-                        <li class="nav-action-item" role="none">
-                            <a href="#pagalba" class="nav-action-link" role="menuitem">Pagalba</a>
-                        </li>
-                    </ul>
+                    <div class="nav-actions">
+                        <!-- Action buttons will go here -->
+                    </div>
                     <button class="search-button" type="button" aria-label="Search">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.333 12.667A5.333 5.333 0 1 0 7.333 2a5.333 5.333 0 0 0 0 10.667ZM14 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M9 16.5A7.5 7.5 0 1 0 9 1.5a7.5 7.5 0 0 0 0 15ZM17.5 17.5l-3.625-3.625" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
                 </div>
 
-                <!-- Mobile Menu Toggle Button -->
-                <button class="mobile-menu-toggle" 
-                        type="button" 
-                        aria-controls="mobile-menu" 
-                        aria-expanded="false" 
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle"
+                        type="button"
+                        aria-controls="mobile-menu"
+                        aria-expanded="false"
                         aria-label="Toggle navigation menu">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
-                    <span class="sr-only">Menu</span>
                 </button>
             </div>
-
-            <!-- Mobile Navigation Menu -->
-            <div class="mobile-menu" id="mobile-menu" role="menu" aria-hidden="true">
-                <ul class="mobile-nav-list" role="none">
-                    <li class="mobile-nav-item" role="none">
-                        <a href="#privatieims" class="mobile-nav-link" role="menuitem" tabindex="-1">Privatieims</a>
-                    </li>
-                    <li class="mobile-nav-item" role="none">
-                        <a href="#verslui" class="mobile-nav-link" role="menuitem" tabindex="-1">Verslui</a>
-                    </li>
-                    <li class="mobile-nav-item mobile-nav-divider" role="none">
-                        <a href="#pastomatai" class="mobile-nav-link" role="menuitem" tabindex="-1">Paštomatai</a>
-                    </li>
-                    <li class="mobile-nav-item" role="none">
-                        <a href="#siusti-siunta" class="mobile-nav-link" role="menuitem" tabindex="-1">Siųsti siuntą</a>
-                    </li>
-                    <li class="mobile-nav-item" role="none">
-                        <a href="#sekti-siunta" class="mobile-nav-link" role="menuitem" tabindex="-1">Sekti siuntą</a>
-                    </li>
-                    <li class="mobile-nav-item" role="none">
-                        <a href="#pagalba" class="mobile-nav-link" role="menuitem" tabindex="-1">Pagalba</a>
-                    </li>
-                </ul>
-            </div>
         </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu" role="menu" aria-hidden="true">
+            <ul class="mobile-nav-list" role="none">
+                <li class="mobile-nav-item" role="none">
+                    <a href="#privatieims" class="mobile-nav-link" role="menuitem" tabindex="-1">Privatieims</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="#verslui" class="mobile-nav-link" role="menuitem" tabindex="-1">Verslui</a>
+                </li>
+                <li class="mobile-nav-item mobile-nav-divider" role="none">
+                    <a href="#kontaktai" class="mobile-nav-link" role="menuitem" tabindex="-1">Kontaktai</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="#karjera" class="mobile-nav-link" role="menuitem" tabindex="-1">Karjera</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="#apie-mus" class="mobile-nav-link" role="menuitem" tabindex="-1">Apie mus</a>
+                </li>
+            </ul>
+        </div>
     </header>
 
     <!-- Main Content -->

@@ -77,53 +77,231 @@
   right: 0;
   z-index: var(--z-index-fixed);
   background-color: var(--color-background);
-  border-bottom: 1px solid var(--color-border-light);
-  box-shadow: var(--shadow-sm);
   transition: all 0.3s ease;
 }
+
+/* ===================================
+   MENU BAR - Dark overlay at top (Figma: 1274:95372)
+   ===================================
+*/
+
+.menu-bar {
+  position: relative;
+  width: 100%;
+  height: 32px;
+  background-color: #33596A; /* Secondary/Secondary 40 from Figma */
+}
+
+.menu-bar-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(79, 79, 79, 0.2);
+  backdrop-filter: blur(65px);
+}
+
+.menu-bar-content {
+  position: relative;
+  max-width: 1512px;
+  margin: 0 auto;
+  padding: 0 12px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 424px;
+}
+
+.menu-bar-menus {
+  display: flex;
+  gap: 2px;
+}
+
+.menu-bar-link {
+  font-family: var(--font-family-primary);
+  font-size: 0.75rem; /* 12px - Small size from Figma */
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.menu-bar-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-bar-items {
+  display: flex;
+  gap: 6px;
+}
+
+/* ===================================
+   TOP BAR - Secondary navigation (Figma: 1274:94200)
+   ===================================
+*/
+
+.top-bar {
+  width: 100%;
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.top-bar-container {
+  max-width: 1512px;
+  margin: 0 auto;
+  padding: 8px 144px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 411px;
+}
+
+.top-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-family-primary);
+  font-size: 0.75rem; /* 12px */
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.language-selector:hover {
+  background-color: var(--color-background-tertiary);
+}
+
+.top-bar-link {
+  font-family: var(--font-family-primary);
+  font-size: 0.75rem; /* 12px */
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.top-bar-link:hover {
+  background-color: var(--color-background-tertiary);
+}
+
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.login-label {
+  font-family: var(--font-family-primary);
+  font-size: 0.75rem; /* 12px */
+  font-weight: var(--font-weight-regular);
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+
+.login-input {
+  width: 144px;
+  padding: 6px 12px;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-family: var(--font-family-primary);
+  font-size: 0.75rem; /* 12px */
+  font-weight: var(--font-weight-regular);
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  transition: all 0.3s ease;
+}
+
+.login-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(100, 51, 149, 0.1);
+}
+
+.login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 6px;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
+
+.login-button:active {
+  transform: translateY(0);
+}
+
+/* ===================================
+   NAVIGATION BAR - Main nav (Figma: 1274:94246)
+   ===================================
+*/
 
 /* Navigation Container */
 .navigation {
   width: 100%;
-  height: 48px; /* Venipak top-bar height from Figma */
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1512px; /* Venipak container width from Figma */
+  max-width: 1512px;
   margin: 0 auto;
-  padding: 8px 144px; /* Venipak top-bar padding from Figma */
-  height: 100%;
+  padding: 16px 144px;
+  gap: 117px;
 }
 
 /* Navigation Layout Sections */
 .nav-left {
   display: flex;
   align-items: center;
-  flex: 0 0 auto;
-}
-
-.nav-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 1 1 auto;
+  gap: 40px;
 }
 
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 16px;
-  flex: 0 0 auto;
+  gap: 24px;
 }
 
 /* Logo Section */
-.nav-logo {
-  flex-shrink: 0;
-}
-
 .logo-link {
   display: inline-block;
   line-height: 0;
@@ -135,116 +313,24 @@
 }
 
 .logo-image {
-  height: 23px; /* Official Venipak logo proportions */
+  height: 28px; /* Figma: 148x28 */
   width: auto;
-  max-width: 120px;
+  max-width: 148px;
   object-fit: contain;
 }
 
-/* Desktop Navigation List */
-.nav-list {
+/* Main Menu */
+.main-menu {
   display: flex;
   align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 16px; /* Venipak navigation gap from Figma */
-}
-
-.nav-item {
-  position: relative;
-}
-
-.nav-link {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding: 8px 16px;
-  color: var(--color-text-primary);
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-sm);
-  font-weight: 500;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.nav-link-dropdown {
-  /* Dropdown specific styling */
-}
-
-.dropdown-icon {
-  transition: transform 0.3s ease;
-}
-
-.nav-link-dropdown[aria-expanded="true"] .dropdown-icon {
-  transform: rotate(180deg);
-}
-
-.nav-link:hover {
-  color: var(--color-primary);
-  background-color: var(--color-background-secondary);
-  transform: translateY(-1px);
-}
-
-.nav-link:focus {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
-}
-
-.nav-link[aria-current="page"] {
-  color: var(--color-primary);
-  font-weight: var(--font-weight-semibold);
-}
-
-.nav-link[aria-current="page"]::after {
-  content: '';
-  position: absolute;
-  bottom: -3px; /* Venipak underline position from Figma */
-  left: 0px;
-  width: 100%;
-  height: 1px; /* Venipak underline height from Figma */
-  background-color: var(--color-primary);
-  border-radius: 0;
-}
-
-/* Action Navigation */
-.nav-actions {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
   gap: 24px;
 }
 
-.nav-action-item {
-  position: relative;
-}
-
-.nav-action-link {
+/* Nav Actions */
+.nav-actions {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 8px;
-  color: var(--color-text-primary);
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-sm);
-  font-weight: 400;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-}
-
-.nav-action-link:hover {
-  color: var(--color-primary);
-  background-color: var(--color-background-secondary);
-}
-
-.nav-icon {
-  flex-shrink: 0;
+  gap: 24px;
 }
 
 /* Search Button */
