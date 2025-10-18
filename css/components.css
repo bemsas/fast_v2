@@ -391,47 +391,155 @@
 /* ===================================
    HERO SECTION COMPONENTS
    ===================================
-   Hero styles will be implemented in task 4
+   Hero styles from Figma specifications
 */
 
 .hero {
-  /* Hero section container - exact styling from Figma */
+  /* Hero section container - Figma: 1512px width, 480px height, padding 0 144px */
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  width: 100%;
+  max-width: 1512px;
+  height: 480px;
+  margin: 0 auto;
+  padding: 0 144px;
+  background-color: var(--color-background-secondary); /* Primary/Primary 10 #EBE4FE */
   position: relative;
-  /* Background, padding, and layout will be set from Figma specs */
+  overflow: hidden;
 }
 
 .hero-content {
-  /* Hero content wrapper - exact positioning from Figma */
+  /* Hero content wrapper - Figma: fill horizontal, hug vertical, gap 48px */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 auto;
+  gap: 48px;
+  padding: 0 104px 0 0; /* Right padding from Figma */
+  z-index: 2;
+}
+
+.hero-heading-wrapper {
+  /* Wrapper for heading and description */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .hero-headline {
-  /* Hero main headline - exact typography from Figma */
+  /* Hero main headline - Figma H1 Desktop */
   font-family: var(--font-family-heading);
-  font-size: var(--font-size-h1);
+  font-size: 2.5rem; /* 40px */
   font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-tight);
-  margin-bottom: var(--spacing-md);
+  line-height: 1.25;
+  color: var(--color-heading);
+  margin: 0;
 }
 
-.hero-subheadline {
-  /* Hero subheadline - exact typography from Figma */
-  font-size: var(--font-size-body);
-  line-height: var(--line-height-normal);
-  margin-bottom: var(--spacing-lg);
+.hero-description {
+  /* Hero description text - Figma Paragraph/Regular */
+  font-family: var(--font-family-primary);
+  font-size: 1rem; /* 16px */
+  font-weight: var(--font-weight-regular);
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  margin: 0;
+  max-width: 500px;
 }
 
 .hero-cta {
-  /* Hero call-to-action button - exact styling from Figma */
+  /* Hero call-to-action button wrapper */
+  display: flex;
+  gap: 16px;
 }
 
-.hero-background {
-  /* Hero background image/video - exact positioning from Figma */
-  position: absolute;
-  top: 0;
-  left: 0;
+.hero-photo {
+  /* Hero photo container - Figma: fill horizontal and vertical */
+  position: relative;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.hero-image-wrapper {
+  /* Image wrapper */
+  position: relative;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image {
+  /* Hero image - Figma: 612x480 */
+  width: auto;
+  height: 100%;
+  max-height: 480px;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-accent {
+  /* Purple accent rectangles - Figma: 102x512, Primary 50 #9339F2 */
+  position: absolute;
+  width: 102px;
+  height: 512px;
+  background-color: var(--color-primary);
+  z-index: 0;
+}
+
+.hero-accent-left {
+  /* Left accent - Figma: x:0, y:0 */
+  left: 0;
+  top: 0;
+}
+
+.hero-accent-right {
+  /* Right accent - Figma: x:510, y:-32 */
+  right: -102px;
+  top: -32px;
+}
+
+/* Primary Button Styles */
+.btn-primary {
+  /* Primary button - Figma: Secondary 50 #E7F43B */
+  background-color: var(--color-secondary);
+  color: var(--color-text-primary);
+  border: none;
+  padding: 10px 24px;
+  font-family: var(--font-family-primary);
+  font-size: 0.875rem; /* 14px */
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-secondary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-large {
+  padding: 12px 28px;
+  font-size: 1rem; /* 16px */
 }
 
 /* ===================================
@@ -588,4 +696,129 @@
 .flex-column {
   display: flex;
   flex-direction: column;
+}
+
+/* ===================================
+   FOOTER COMPONENTS
+   ===================================
+   Footer styles from Figma specifications
+*/
+
+.footer {
+  /* Footer container - Figma: 1512px width, Primary 50 #9339F2 background */
+  width: 100%;
+  background-color: var(--color-primary); /* #643395 */
+  color: var(--color-text-inverse);
+}
+
+.footer-content {
+  /* Footer content wrapper - Figma: gap 40px, padding 80px 144px 40px */
+  max-width: 1512px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 80px 144px 40px;
+}
+
+.footer-columns {
+  /* Footer columns container - Figma: row, gap 24px, fill horizontal */
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  gap: 24px;
+}
+
+.footer-column {
+  /* Individual footer column - Figma: column, gap 24px, fill horizontal */
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footer-column-title {
+  /* Footer column heading - Figma: font size varies, white color */
+  font-family: var(--font-family-heading);
+  font-size: 1.125rem; /* 18px */
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.5;
+  color: var(--color-text-inverse);
+  margin: 0;
+}
+
+.footer-links {
+  /* Footer links list */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links li {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-link {
+  /* Footer link - Figma: Regular text, white color */
+  font-family: var(--font-family-primary);
+  font-size: 0.875rem; /* 14px */
+  font-weight: var(--font-weight-regular);
+  line-height: 1.5;
+  color: var(--color-text-inverse);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  display: inline-block;
+}
+
+.footer-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.footer-divider {
+  /* Footer divider - Figma: horizontal, fill, height 1px, white 20% opacity */
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom {
+  /* Footer bottom section - Figma: row, space-between, gap 40px */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer-copyright {
+  /* Footer copyright text - Figma: Regular 14px, white */
+  font-family: var(--font-family-primary);
+  font-size: 0.875rem; /* 14px */
+  font-weight: var(--font-weight-regular);
+  line-height: 1.5;
+  color: var(--color-text-inverse);
+  margin: 0;
+}
+
+.footer-privacy-link {
+  /* Footer privacy policy link - Figma: button-text-contrast style */
+  font-family: var(--font-family-primary);
+  font-size: 0.875rem; /* 14px */
+  font-weight: var(--font-weight-regular);
+  line-height: 1.5;
+  color: var(--color-text-inverse);
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-privacy-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
 }

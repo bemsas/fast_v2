@@ -80,10 +80,25 @@
   /* Hero section tablet adjustments */
   .hero {
     /* Tablet hero layout from Figma */
+    padding: 0 32px;
+    height: 400px;
   }
-  
+
+  .hero-content {
+    padding: 0 40px 0 0;
+  }
+
   .hero-headline {
     /* Tablet hero headline sizing from Figma */
+    font-size: 2rem; /* 32px */
+  }
+
+  .hero-description {
+    font-size: 0.9375rem; /* 15px */
+  }
+
+  .footer-content {
+    padding: 60px 32px 32px;
   }
   
   /* Content sections tablet layout */
@@ -278,16 +293,45 @@
   
   /* Mobile hero adjustments */
   .hero {
-    /* Mobile hero layout from Figma */
+    /* Mobile hero layout - stack vertically */
+    flex-direction: column;
+    height: auto;
+    padding: 40px 16px;
     text-align: center;
   }
-  
-  .hero-headline {
-    /* Mobile hero headline sizing from Figma */
+
+  .hero-content {
+    padding: 0;
+    order: 2;
   }
-  
-  .hero-subheadline {
-    /* Mobile hero subheadline sizing from Figma */
+
+  .hero-photo {
+    order: 1;
+    height: 300px;
+    margin-bottom: 24px;
+  }
+
+  .hero-headline {
+    /* Mobile hero headline sizing */
+    font-size: 1.875rem; /* 30px */
+  }
+
+  .hero-description {
+    /* Mobile hero subheadline sizing */
+    font-size: 0.875rem; /* 14px */
+    max-width: 100%;
+  }
+
+  .hero-cta {
+    justify-content: center;
+  }
+
+  .btn-large {
+    width: 100%;
+  }
+
+  .hero-accent {
+    display: none; /* Hide accent rectangles on mobile */
   }
   
   /* Mobile content sections */
@@ -323,6 +367,22 @@
   .card {
     /* Mobile card spacing from Figma */
     padding: var(--spacing-md);
+  }
+
+  /* Mobile footer adjustments */
+  .footer-content {
+    padding: 40px 16px 24px;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
   }
 }
 
